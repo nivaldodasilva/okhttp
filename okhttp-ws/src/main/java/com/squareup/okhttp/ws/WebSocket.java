@@ -65,4 +65,11 @@ public interface WebSocket {
    * @throws IllegalStateException if already closed.
    */
   void close(int code, String reason) throws IOException;
+  
+  /**
+   * Return the writer status. 
+   * Check before sendMessage
+   * 
+   */
+  boolean isConnected();
 }
